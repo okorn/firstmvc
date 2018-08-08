@@ -1,0 +1,15 @@
+{
+  "name": "mvc",
+  "version": "0.0.1",
+  "description": "ejemplo de un mvc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MAB",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "sweetalert": "^2.1.0"
+  }
+}
