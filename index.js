@@ -31,7 +31,7 @@ const c = {
   }
 };
 
-///// Guardar cantidad de clicks (mas de 10) en localstorage para que no aparezca mas el cartel. Y que no aparezca al hacer reload de pagina.
+///// Guardar cantidad de clicks en localstorage para que no aparezca mas el cartel a partir de cierta cantidad.
 
 var clicks = 0;
 
