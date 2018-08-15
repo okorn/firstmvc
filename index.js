@@ -7,10 +7,15 @@ const m = {
 // * nuestra vista se encarga de mostrar en panalla lo que requerimos
 // * tambien se va a encargar de las interacciones desde el cliente
 const v = {
-  renderAlert: function(){
-    swal(m.dataHead, m.dataText, "success");
+  renderAlert: function(data){
+    if (window.localStorage.clicks < 4 || window.localStorage.clicks === 0) {
+      swal(m.dataHead, m.dataText, "success");
+    } else {
+      swal.close();
+    }  
   },
-  renderBody: function(){
+
+  renderBody: function(data){
     const newContentText = document.getElementById('textContent')
     newContentText.innerHTML= ` <h1 class="title">${m.dataHead}</h1><h2 class="subtitle">
     ${m.dataText}</h2> `;
@@ -26,4 +31,17 @@ const c = {
   }
 };
 
+///// Guardar cantidad de clicks (mas de 10) en localstorage para que no aparezca mas el cartel. Y que no aparezca al hacer reload de pagina.
+
+var clicks = 0;
+
+function onClick() {
+    clicks += 1;
+    localStorage.setItem("clicks", clicks);
+    document.getElementById("clicks").innerHTML = clicks;
+    c.updateDataOnload();
+};
+
 window.onload = c.updateDataOnload;
+ 
+
