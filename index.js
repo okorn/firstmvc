@@ -34,7 +34,7 @@ const c = {
 
 ///// Guardar cantidad de clicks en localstorage para que no aparezca mas el cartel a partir de cierta cantidad.
 
-var clicks = 0;
+let clicks = 0;
 
 function onClick() {
     clicks += 1;
