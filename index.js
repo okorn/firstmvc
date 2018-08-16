@@ -11,6 +11,7 @@ const v = {
     if (window.localStorage.clicks < 4 || window.localStorage.clicks === 0) {
       swal(m.dataHead, m.dataText, "success");
     } else {
+      v.renderBody(m);
       swal.close();
     }  
   },
